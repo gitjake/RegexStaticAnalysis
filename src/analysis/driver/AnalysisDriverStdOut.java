@@ -645,6 +645,8 @@ public class AnalysisDriverStdOut {
 			} catch (Exception e) {
 				if (DEBUG) {
 					e.printStackTrace();
+				} else if (isVerbose) {
+					System.out.println("  " + e.getMessage());
 				}
 				Thread.currentThread().interrupt();
 				analysisResultsType = AnalysisResultsType.ANALYSIS_FAILED;
