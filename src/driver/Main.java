@@ -36,6 +36,7 @@ public class Main {
 
 	private static final String TEST_IDA_SETTING = "--ida";
 	private static final String IS_VERBOSE_SETTING = "--verbose";
+	private static final String IS_DEBUG_SETTING = "--debug";
 	private static final String CONSTRUCT_EDA_EXPLOIT_STRING_SETTING = "--construct-eda-exploit-string";
 	private static final String TEST_EDA_EXPLOIT_STRING_SETTING = "--test-eda-exploit-string";
 	private static final String CONSTRUCT_IDA_EXPLOIT_STRING_SETTING = "--construct-ida-exploit-string";
@@ -100,6 +101,7 @@ public class Main {
 		boolean shouldTestIDA = determineWhetherShouldTestIDA();
 
 		boolean isVerbose = determineWhetherIsVerbose();
+		boolean isDebug = commandLineFlags.contains(IS_DEBUG_SETTING);
 
 		boolean shouldConstructEdaExploitString = determineWhetherShouldConstructEdaExploitString();
 		
@@ -122,7 +124,7 @@ public class Main {
 		BufferedReader regexesReader = setupRegexesReader(inputType);
 
 		
-		InterfaceSettings interfaceSettings = new InterfaceSettings(inputType, isVerbose);
+		InterfaceSettings interfaceSettings = new InterfaceSettings(inputType, isVerbose, isDebug);
 		AnalysisSettings analysisSettings = new AnalysisSettings(nfaConstruction, 
 						preprocessingType, 
 						epsilonLoopRemovalStrategy, 
@@ -377,6 +379,8 @@ public class Main {
 		System.out.println("\tverbose=[true|false]:");
 		System.out.println("\t\tTrue: Print verbose output.");
 		System.out.println("\t\tFalse: Do not print verbose output.");
+		System.out.println("\tdebug:");
+		System.out.println("\t\tPrint stacktraces of handled exceptions");
 		System.out.println("\ttest-eda-exploit-string=[true|false]:");
 		System.out.println("\t\tTrue: Test the generated exploit strings on the corresponding regexes for exponential behaviour using the Java matcher (only valid when using Java construction (--java)), testing regexes for polynomial behaviour is not yet implented.");
 		System.out.println("\t\tFalse: Do not test the generated exploit strings.");

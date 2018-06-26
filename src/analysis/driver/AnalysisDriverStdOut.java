@@ -37,7 +37,7 @@ import com.google.gson.Gson;
 
 public class AnalysisDriverStdOut {
 
-	private static final boolean DEBUG = false;
+	private static boolean DEBUG = true;
 	
 	/* Interface Settings */
 	private static InputType inputType;
@@ -58,6 +58,7 @@ public class AnalysisDriverStdOut {
 	public static void performAnalysis(BufferedReader regexesReader, InterfaceSettings interfaceSettings, AnalysisSettings analysisSettings) {
 		inputType = interfaceSettings.getInputType();
 		isVerbose = interfaceSettings.getIsVerbose();	
+		DEBUG = interfaceSettings.getIsDebug();
 
 		nfaConstruction = analysisSettings.getNFAConstruction();
 		preprocessingType = analysisSettings.getPreprocessingType();
