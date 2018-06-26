@@ -251,7 +251,7 @@ public class JavaParseTreeToNFAConverter extends ParseTreeToNFAConverter {
 			throw new UnsupportedOperationException("Possessive quantifiers not implemented: " + quantifierType + " in " + starOperator);
 			//break;
 		default:
-			throw new RuntimeException("Unkown quantifier: " + quantifierType + " in " + starOperator);
+			throw new RuntimeException("Unknown quantifier: " + quantifierType + " in " + starOperator);
 		}
 		 
 		
@@ -314,7 +314,7 @@ public class JavaParseTreeToNFAConverter extends ParseTreeToNFAConverter {
 			throw new UnsupportedOperationException("Possessive quantifiers not implemented: " + quantifierType + " in " + plusOperator);
 			//break;
 		default:
-			throw new RuntimeException("Unkown quantifier: " + quantifierType + " in " + plusOperator);
+			throw new RuntimeException("Unknown quantifier: " + quantifierType + " in " + plusOperator);
 		}
 		 
 		
@@ -377,7 +377,7 @@ public class JavaParseTreeToNFAConverter extends ParseTreeToNFAConverter {
 		case POSSESSIVE:
 			throw new UnsupportedOperationException("Possessive quantifiers not implemented: " + quantifierType + " in " + countClosureOperator);
 		default:
-			throw new RuntimeException("Unkown quantifier: " + quantifierType + " in " + countClosureOperator);
+			throw new RuntimeException("Unknown quantifier: " + quantifierType + " in " + countClosureOperator);
 		}		 
 		
 		NFAGraph resultNFA = new NFAGraph();
@@ -477,7 +477,7 @@ public class JavaParseTreeToNFAConverter extends ParseTreeToNFAConverter {
 		case POSSESSIVE:
 			throw new UnsupportedOperationException("Possessive quantifiers not implemented: " + quantifierType + " in " + questionMarkOperator);
 		default:
-			throw new RuntimeException("Unkown quantifier: " + quantifierType + " in " + questionMarkOperator);
+			throw new RuntimeException("Unknown quantifier: " + quantifierType + " in " + questionMarkOperator);
 		}
 		assert m.getAcceptingStates().size() == 1 : "Construction assumes only one accept state";
 		NFAVertexND mAcceptState = m.getAcceptingStates().iterator().next();

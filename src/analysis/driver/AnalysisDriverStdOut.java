@@ -369,7 +369,7 @@ public class AnalysisDriverStdOut {
 			analyser = new NFAAnalyserFlattening(priorityRemovalStrategy);
 			break;
 		default:
-			throw new RuntimeException("Unkown Strategy: " + epsilonLoopRemovalStrategy);
+			throw new RuntimeException("Unknown Strategy: " + epsilonLoopRemovalStrategy);
 		}
 		return analyser;
 	}

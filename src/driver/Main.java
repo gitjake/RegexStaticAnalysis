@@ -374,18 +374,18 @@ public class Main {
 		System.out.println("\tregex='regex to analyse':");
 		System.out.println("\t\tAnalyse the one regex specified in the command line argument 'regex'.");
 		System.out.println("\tida=[true|false]:");
-		System.out.println("\t\tTrue: Test for IDA aswell as EDA.");
+		System.out.println("\t\tTrue: Test for IDA as well as EDA.");
 		System.out.println("\t\tFalse: Only test for EDA.");
 		System.out.println("\tverbose=[true|false]:");
 		System.out.println("\t\tTrue: Print verbose output.");
 		System.out.println("\t\tFalse: Do not print verbose output.");
 		System.out.println("\tdebug:");
-		System.out.println("\t\tPrint stacktraces of handled exceptions");
+		System.out.println("\t\tPrint the stacktraces of handled exceptions");
 		System.out.println("\ttest-eda-exploit-string=[true|false]:");
-		System.out.println("\t\tTrue: Test the generated exploit strings on the corresponding regexes for exponential behaviour using the Java matcher (only valid when using Java construction (--java)), testing regexes for polynomial behaviour is not yet implented.");
+		System.out.println("\t\tTrue: Test the generated exploit strings on the corresponding regexes for exponential behaviour using the Java matcher (only valid when using Java construction (--java)), testing regexes for polynomial behaviour is not yet implemented.");
 		System.out.println("\t\tFalse: Do not test the generated exploit strings.");
 		System.out.println("\ttimeout=d:");
-		System.out.println("\t\tSet the timeout to d miliseconds. If d <= 0, timeout is disabled.");
+		System.out.println("\t\tSet the timeout to d milliseconds. If d <= 0, timeout is disabled.");
 
 
 
